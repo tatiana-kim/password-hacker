@@ -1,4 +1,8 @@
-# example prompt: python hack.py localhost 9090
+"""
+The password may include letters from a to z and numbers from 0 to 9
+Password's length is unknown
+Example prompt: python hack.py localhost 9090
+"""
 import sys
 from socket import socket
 from itertools import product
@@ -40,6 +44,7 @@ for k in a:
     response = hack_socket.recv(1024)
     response_decoded = response.decode()
     if response_decoded == "Connection success!":
+        print(password)
         break
 
 hack_socket.close()
