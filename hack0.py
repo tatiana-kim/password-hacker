@@ -17,7 +17,7 @@ def hack():
         password = password.encode()
         # send through socket
         new_socket.send(password)
-        # recieve the response
+        # receive the response
         response = new_socket.recv(1024)
         # decode the response from bytes to string amd print it
         print(response.decode())
